@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MenuItems } from '../../models/menu-items';
 
 @Component({
   selector: 'menu-panel',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./menu-panel.component.scss'],
 })
 export class MenuPanelComponent {
+
+  constructor(items: MenuItems) {}
+
+
 
 }

@@ -6,6 +6,7 @@ import { Role, Roles } from './models/role';
 import { select, Store } from '@ngrx/store';
 import { BehaviorSubject, Observable, of } from 'rxjs';
 import { flatMap } from 'rxjs/operators';
+import { AccountService } from './services/account.service';
 
 @Injectable()
 export class AppGuard implements CanActivate {

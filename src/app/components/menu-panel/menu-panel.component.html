@@ -1,10 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+  <div [ngSwitch]="user_role" class="container">
+    <ng-template ngSwitchCase="1">
+      <a class="navbar-brand">WebScriptManager</a>
+      <ul  class="nav navbar-nav" routerLinkActive="active">
+        <template ngFor let-item [ngForOf]="items.mainItems">
+          <li>{{item}}</li>
+        </template>
+      </ul>
+    </ng-template>
+    <ng-template *ngSwitchCase="2">
+      <a class="navbar-brand">WebScriptManager</a>
+      <ul  class="nav navbar-nav" routerLinkActive="active">
+        <template ngFor let-item [ngForOf]="items.adminItems">
+          <li>{{item}}</li>
+        </template>
+      </ul>
+    </ng-template>
+    <ng-template *ngSwitchCase="3">
+      <a class="navbar-brand">WebScriptManager</a>
+      <ul  class="nav navbar-nav" routerLinkActive="active">
+        <template ngFor let-item [ngForOf]="items.integratorItems">
+          <li>{{item}}</li>
+        </template>
+      </ul>
+    </ng-template>
+    <ng-template *ngSwitchCase="4">
+      <a class="navbar-brand">WebScriptManager</a>
+      <ul  class="nav navbar-nav" routerLinkActive="active">
+        <template ngFor let-item [ngForOf]="items.userItems">
+          <li>{{item}}</li>
+        </template>
+      </ul>
+    </ng-template>
+    <ng-template ngSwitchDefault>
+      <a class="navbar-brand">WebScriptManager</a>
+    </ng-template>
+  </div>
+</nav>
