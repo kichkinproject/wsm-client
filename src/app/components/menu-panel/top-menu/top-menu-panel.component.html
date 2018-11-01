@@ -3,33 +3,33 @@
     <ng-template ngSwitchCase="1">
       <a class="navbar-brand">WebScriptManager</a>
       <ul  class="nav navbar-nav" routerLinkActive="active">
-        <template ngFor let-item [ngForOf]="items.mainItems">
+        <ng-template ngFor let-item [ngForOf]="items.mainItems">
           <li>{{item}}</li>
-        </template>
+        </ng-template>
       </ul>
     </ng-template>
-    <ng-template *ngSwitchCase="2">
+    <ng-template ngSwitchCase="2">
       <a class="navbar-brand">WebScriptManager</a>
       <ul  class="nav navbar-nav" routerLinkActive="active">
-        <template ngFor let-item [ngForOf]="items.adminItems">
+        <ng-template ngFor let-item [ngForOf]="items.adminItems">
           <li>{{item}}</li>
-        </template>
+        </ng-template>
       </ul>
     </ng-template>
-    <ng-template *ngSwitchCase="3">
+    <ng-template ngSwitchCase="3">
       <a class="navbar-brand">WebScriptManager</a>
       <ul  class="nav navbar-nav" routerLinkActive="active">
-        <template ngFor let-item [ngForOf]="items.integratorItems">
+        <ng-template ngFor let-item [ngForOf]="items.integratorItems">
           <li>{{item}}</li>
-        </template>
+        </ng-template>
       </ul>
     </ng-template>
-    <ng-template *ngSwitchCase="4">
+    <ng-template ngSwitchCase="4">
       <a class="navbar-brand">WebScriptManager</a>
       <ul  class="nav navbar-nav" routerLinkActive="active">
-        <template ngFor let-item [ngForOf]="items.userItems">
+        <ng-template ngFor let-item [ngForOf]="items.userItems">
           <li>{{item}}</li>
-        </template>
+        </ng-template>
       </ul>
     </ng-template>
     <ng-template ngSwitchDefault>
